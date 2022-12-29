@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Odev-03-Blog</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-light fixed-top px-5 ">
+        <div class="container-fluid">
+          <button class="navbar-toggler bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#navbarodev3" >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <img src="./photos/logo.png" class="img-fluid imgsize" alt="Logo">
+          <div class="collapse navbar-collapse justify-content-start" id="navbarodev3">
+            <ul class="navbar-nav gap-5 mx-2">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Anasayfa</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Hakkımızda</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Bize Ulaşın</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+          
+      <div class="container-fluid d-flex flex-column py-5 mt-5" id="bigcont">
+        <div class="accordion" id="firstaccordion">
+          <div class="accordion-item bg-warning" id="accordioncontent">
+            <h2 class="text-center display-4">Blog Oluştur</h2>
+            <h2 class="accordion-header" id="secondform">
+              <button class="accordion-button collapsed btn btn-warning" type="button" data-bs-toggle="collapse" data-bs-target="#Collapsefirst" aria-expanded="true" aria-controls="Collapsefirst">
+              </button>
+            </h2>
+            <div id="Collapsefirst" class="accordion-collapse collapse" aria-labelledby="firstform" data-bs-parent="#firstaccordion">
+              <div class="accordion-body">
+                <form class="d-flex flex-column justify-content-center align-items-center" id="blog-form">
+                  <div class="col mb-4">
+                      <h5 class="text-center text-white">Konu</h5>
+                      <input type="text" class="border border-secondary border-4 rounded" id="subject">
+                  </div>
+        
+                  <div class="col mb-4">
+                      <h5 class="text-center text-white">Kategori</h5>
+                      <input type="text" class="border border-secondary border-4 rounded" id="category" placeholder="Spor/Yemek/Teknoloji..">
+                  </div>
+  
+                  <div class="col mb-4">
+                      <h5 class="text-center text-white">Resim</h5>
+                      <input type="text" class="border border-secondary border-4 rounded" id="image">
+                  </div>
+        
+                  <div class="col mb-4">
+                    <h5 class="text-center text-white">Yazar</h5>
+                    <input type="text" class="border border-secondary border-4 rounded" id="author">
+                  </div>
+                  <div class="col mb-4">
+                    <h5 class="text-center text-white">İçerik</h5>
+                    <textarea name="content" id="content" class="form-control" cols="50" rows="10"></textarea>
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <button class="btn btn-secondary w-100 mt-5" id="add">Ekle</button>
+                  </div>
+              </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion" id="secondaccordion">
+          <div class="accordion-item bg-success">
+            <h2 class="text-center display-4">Blog Editle</h2>
+            <h2 class="accordion-header" id="firstform">
+              <button class="accordion-button collapsed btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#Collapsesecond" aria-expanded="true" aria-controls="Collapsesecond">
+              </button>
+            </h2>
+            <div id="Collapsesecond" class="accordion-collapse collapse" aria-labelledby="secondform" data-bs-parent="#secondaccordion">
+              <div class="accordion-body">
+                <form class="d-flex flex-column justify-content-center align-items-center" id="blog-form">
+                  <div class="col mb-4">
+                      <h5 class="text-center text-white">Konu</h5>
+                      <input type="text" class="border border-secondary border-4 rounded" id="subjectedit">
+                  </div>
+        
+                  <div class="col mb-4">
+                      <h5 class="text-center text-white">Kategori</h5>
+                      <input type="text" class="border border-secondary border-4 rounded" id="categoryedit">
+                  </div>
+        
+                  <div class="col mb-4">
+                      <h5 class="text-center text-white">Resim</h5>
+                      <input type="text" class="border border-secondary border-4 rounded" id="imageedit">
+                  </div>
+        
+                  <div class="col mb-4">
+                    <h5 class="text-center text-white">Yazar</h5>
+                    <input type="text" class="border border-secondary border-4 rounded" id="authoredit">
+                  </div>
+                  <div class="col mb-4">
+                    <h5 class="text-center text-white">İçerik</h5>
+                    <textarea name="content" id="contentedit" class="form-control" cols="50" rows="10"></textarea>
+                  </div>
+                  <div id="editpart" class="d-flex justify-content-center">
+                      
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+  
+  
+        <h1 class="text-center display-1 textfont mb-3 mt-3">BLOGLAR</h1>
+        <form class="d-flex justify-content-center mb-5" role="search">
+          <input class="form-control me-2 w-50" type="search" id="search" placeholder="Şu Konulu Blogu Arıyorum" aria-label="Search">
+          <button class="btn btn-outline-warning" id="searchbutton" type="button" disabled>Search</button>
+        </form>
+        <h2 class="text-center display-5 text-font mb-5 mt-3 ">Kategoriler</h2>
+        <div class="d-flex flex-row justify-content-evenly mb-3" id="categorybuttondiv">
+          <button class="btn btn-secondary bi" id="All">Tümü</button>
+          <button class="btn btn-dark bi" id="Spor">Spor</button>
+          <button class="btn btn-success bi" id="Yemek">Yemek</button>
+          <button class="btn btn-primary bi" id="Teknoloji">Teknoloji</button>
+          <button class="btn btn-info bi" id="Other">Diğer</button>
+        </div>
+        <div class="row d-flex flex-row" id="blogcontainer">
+        </div>
+      </div>
+
+      <footer class="container-fluid bg-warning d-flex flex-column justify-content-center mt-5 py-5 footertext">
+        <div class="row py-5">
+          <div class="col-md-4 col-12">
+            <ul class="list-group list-unstyled text-center text-white">
+            
+              <li class="mb-3">Hakkımızda</li>
+              <li class="mb-3">Bize Ulaşın</li>
+              <li class="mb-3">Medyada Biz</li>
+
+          </ul>
+          </div>
+
+          <div class="col-md-4 col-12">
+            <ul class="list-group list-unstyled text-center text-white">
+              <li class="mb-3">Yazarlarımız</li>
+              <li class="mb-3">Kurucumuz</li>
+              <li class="mb-3">Sponsorlar</li>
+          </ul>
+          </div>
+
+          <div class="col-md-4 col-12">
+            <ul class="list-group list-unstyled text-center text-white">
+            
+              <li class="mb-3"><a class="mb-3 bi bi-instagram text-white" href="#"></a></li>
+              <li class="mb-3"><a class="bi bi-youtube text-white" href="#"></a></li>
+              <li><a class="bi bi-twitter text-white" href="#"></a></li>
+
+          </ul>
+          </div>
+          
+        </div>
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-4 col-12">
+            <img src="./photos/logo.png" class="img-fluid">
+          </div>
+        </div>
+      </footer>
+
+      <script src="elements.js"></script>
+      <script src="ui.js"></script>
+      <script src="app.js"></script>
+      <script src="events.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
